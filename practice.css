@@ -1,0 +1,101 @@
+/* Infinite Practice — uses the same theme variables as batch.css */
+.ip-page { max-width: 860px; }
+.ip-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--brand-bright); margin: 0 0 8px; }
+.ip-h2 { font-size: 22px; font-weight: 700; line-height: 1.25; margin: 0; }
+.ip-sub { margin: 8px 0 0; font-size: 14px; line-height: 1.55; color: var(--muted); }
+.ip-card { background: var(--panel-solid); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 20px; margin-bottom: 16px; }
+.ip-hero { background: linear-gradient(135deg, color-mix(in srgb, var(--brand) 22%, var(--panel-solid)), var(--panel-solid)); }
+.ip-hero h2 { font-size: 28px; }
+.ip-hero h2 span { color: var(--brand-bright); }
+
+.ip-grid { display: grid; gap: 12px; margin-top: 16px; }
+.ip-grid.two { grid-template-columns: 1fr 1fr; }
+.ip-grid.three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 560px) { .ip-grid.two, .ip-grid.three { grid-template-columns: 1fr; } }
+
+.ip-tile { display: flex; align-items: center; gap: 14px; width: 100%; text-align: left; padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--line-strong); background: var(--panel-soft); transition: .2s; min-height: 76px; }
+.ip-tile:active { transform: scale(.98); }
+.ip-tile.on { border-color: var(--brand); background: color-mix(in srgb, var(--brand) 16%, var(--panel-soft)); }
+.ip-ico { width: 44px; height: 44px; flex: none; display: grid; place-items: center; border-radius: 13px; background: color-mix(in srgb, var(--brand) 18%, transparent); color: var(--brand-bright); }
+.ip-tile.on .ip-ico { background: var(--brand); color: #fff; }
+.ip-ico svg { width: 22px; height: 22px; }
+.ip-ico img { width: 28px; height: 28px; object-fit: contain; }
+.ip-tile b { display: block; font-size: 16px; font-weight: 700; }
+.ip-tile small { display: block; margin-top: 3px; font-size: 12px; color: var(--muted); }
+.ip-go { margin-left: auto; width: 36px; height: 36px; flex: none; display: grid; place-items: center; border-radius: 11px; background: var(--panel-solid); color: var(--muted-bright); }
+.ip-go svg { width: 18px; height: 18px; }
+
+.ip-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.ip-link { background: none; border: 0; padding: 4px 0; font-size: 12px; font-weight: 700; color: var(--brand-bright); }
+.ip-chapters { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; max-height: 420px; overflow-y: auto; padding-right: 2px; }
+@media (max-width: 560px) { .ip-chapters { grid-template-columns: 1fr; } }
+.ip-chap { display: flex; align-items: center; gap: 10px; text-align: left; padding: 11px 12px; border-radius: 13px; border: 1px solid var(--line); background: var(--panel-soft); }
+.ip-chap.on { border-color: var(--brand); background: color-mix(in srgb, var(--brand) 14%, var(--panel-soft)); }
+.ip-box { width: 20px; height: 20px; flex: none; border-radius: 6px; border: 1.5px solid var(--line-strong); display: grid; place-items: center; color: transparent; }
+.ip-box svg { width: 12px; height: 12px; }
+.ip-chap.on .ip-box { background: var(--brand); border-color: var(--brand); color: #fff; }
+.ip-chap span.t { min-width: 0; flex: 1; }
+.ip-chap b { display: block; font-size: 14px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ip-chap small { display: block; margin-top: 2px; font-size: 11px; color: var(--muted); }
+.ip-empty { margin-top: 16px; padding: 28px 16px; text-align: center; font-size: 14px; color: var(--muted); border: 1px dashed var(--line-strong); border-radius: var(--radius-md); }
+
+.ip-legend { font-size: 14px; font-weight: 700; margin: 18px 0 10px; }
+.ip-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.ip-pill { min-width: 42px; height: 38px; padding: 0 14px; border-radius: 12px; border: 1px solid var(--line-strong); background: var(--panel-soft); font-size: 13px; font-weight: 700; color: var(--muted-bright); }
+.ip-pill.on { background: var(--brand); border-color: var(--brand); color: #fff; }
+
+.ip-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 46px; padding: 0 18px; border-radius: 13px; border: 1px solid var(--line-strong); background: var(--panel-soft); font-size: 14px; font-weight: 700; }
+.ip-btn.primary { background: var(--brand); border-color: var(--brand); color: #fff; }
+.ip-btn.warn { color: var(--orange); border-color: color-mix(in srgb, var(--orange) 40%, transparent); }
+.ip-btn.block { width: 100%; margin-top: 18px; height: 50px; }
+.ip-btn:disabled { opacity: .45; cursor: not-allowed; }
+.ip-btn svg { width: 16px; height: 16px; }
+.ip-spin { animation: ipspin .8s linear infinite; }
+@keyframes ipspin { to { transform: rotate(360deg); } }
+.ip-err { margin-top: 12px; padding: 12px 14px; border-radius: 12px; font-size: 13px; line-height: 1.5; background: color-mix(in srgb, var(--danger) 14%, transparent); color: var(--danger); }
+.ip-warn { background: color-mix(in srgb, var(--orange) 14%, transparent); color: var(--orange); }
+.ip-center { text-align: center; padding: 40px 20px; }
+.ip-center h2 { font-size: 18px; margin-bottom: 8px; }
+
+/* question room */
+.ip-bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+.ip-bar .q { font-size: 14px; font-weight: 600; }
+.ip-bar .q small { color: var(--muted); font-weight: 400; }
+.ip-prog { height: 6px; border-radius: 99px; background: var(--panel-soft); overflow: hidden; margin-bottom: 16px; }
+.ip-prog i { display: block; height: 100%; background: var(--brand); border-radius: 99px; transition: width .3s; }
+.ip-qhead { display: flex; justify-content: space-between; gap: 10px; padding-bottom: 12px; margin-bottom: 16px; border-bottom: 1px solid var(--line); font-size: 11px; color: var(--muted); }
+.ip-qhead b { font-weight: 700; letter-spacing: .12em; text-transform: uppercase; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ip-qtext { font-size: 17px; line-height: 1.8; margin-bottom: 20px; }
+.ip-opts { display: grid; gap: 10px; }
+.ip-opt { display: flex; align-items: flex-start; gap: 12px; width: 100%; text-align: left; padding: 13px; border-radius: 16px; border: 1px solid var(--line-strong); background: var(--panel-soft); }
+.ip-opt.on { border-color: var(--brand); background: color-mix(in srgb, var(--brand) 16%, var(--panel-soft)); }
+.ip-opt .k { width: 28px; height: 28px; flex: none; display: grid; place-items: center; border-radius: 9px; font-size: 12px; font-weight: 700; background: var(--panel-solid); color: var(--muted-bright); }
+.ip-opt.on .k { background: var(--brand); color: #fff; }
+.ip-opt .v { min-width: 0; flex: 1; padding-top: 2px; font-size: 14px; line-height: 1.6; }
+.ip-hint { margin: 18px 0 12px; font-size: 12px; color: var(--muted); }
+.ip-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.ip-actions .ip-btn { height: 42px; font-size: 12px; padding: 0 14px; }
+
+.practice-html { overflow-wrap: anywhere; }
+.practice-html p { margin: 0 0 8px; }
+.practice-html img { display: block; margin: 8px auto; max-width: 100%; max-height: 420px; object-fit: contain; border-radius: 8px; background: #fff; }
+.practice-html table { max-width: 100%; display: block; overflow: auto; border-collapse: collapse; }
+.practice-html td, .practice-html th { border: 1px solid var(--line-strong); padding: 4px 8px; }
+.practice-html .katex-display { overflow-x: auto; overflow-y: hidden; padding: 2px 0; }
+.ip-opt .practice-html p { margin: 0; }
+
+/* completion */
+.ip-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 18px; text-align: left; }
+@media (max-width: 560px) { .ip-stats { grid-template-columns: 1fr 1fr; } }
+.ip-stat { padding: 12px; border-radius: 14px; background: color-mix(in srgb, var(--brand) 14%, var(--panel-soft)); }
+.ip-stat small { display: block; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-bright); }
+.ip-stat b { display: block; margin-top: 4px; font-size: 22px; font-family: "Space Grotesk", sans-serif; }
+.ip-trophy { width: 64px; height: 64px; margin: 0 auto; display: grid; place-items: center; border-radius: 18px; background: color-mix(in srgb, var(--brand) 18%, transparent); color: var(--brand-bright); }
+.ip-trophy svg { width: 32px; height: 32px; }
+.ip-sols { margin-top: 20px; display: grid; gap: 12px; text-align: left; }
+.ip-sol { padding: 14px; border-radius: 16px; border: 1px solid var(--line); background: var(--panel-soft); }
+.ip-sol small.n { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.ip-sol .ans { margin: 10px 0 6px; font-size: 12px; font-weight: 700; color: var(--mint); }
+.ip-sol .practice-html { font-size: 14px; line-height: 1.7; margin-top: 8px; }
+.ip-sol .sx { color: var(--muted-bright); }
+.ip-sol a { display: inline-block; margin-top: 8px; font-size: 12px; font-weight: 700; color: var(--brand-bright); }
